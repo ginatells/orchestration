@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  ginatells-ui:
+    build: ../ginatells-ui
+    ports:
+      - "3000:3000"
+  ginatells-movies-api:
+    build: ../movies-api
+    ports:
+      - "5000:80"
