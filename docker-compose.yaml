@@ -1,7 +1,9 @@
 version: "3.7"
 services:
   ginatells-ui:
-    build: ../ginatells-ui
+    build:
+      context: ../ginatells-ui
+      dockerfile: Dockerfile.production
     ports:
       - "3000:3000"
   ginatells-movies-api:
