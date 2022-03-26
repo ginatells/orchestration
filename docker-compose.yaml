@@ -3,10 +3,13 @@ services:
   ginatells-ui:
     build:
       context: ../ginatells-ui
+      network: host
       dockerfile: Dockerfile.production
     ports:
       - "3000:3000"
   ginatells-movies-api:
-    build: ../movies-api
+    build:
+      context: ../movies-api
+      network: host
     ports:
       - "5000:80"
